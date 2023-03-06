@@ -1,12 +1,13 @@
-import { AppProvider } from '@/providers/app';
-import { AppRoutes } from '@/routes';
+// import { TopNav } from "./features/TopNav";
 
-function App() {
+import { TopNav } from "features/TopNav";
+
+const App = () => {
   return (
-    <AppProvider>
-      <AppRoutes />
-    </AppProvider>
+    <>
+      <TopNav/>
+    </>
   );
 }
 
-export default App;
+export default App
