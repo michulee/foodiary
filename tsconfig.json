@@ -3,7 +3,8 @@
     "baseUrl": "src",
     "paths": {
       "@components/*": ["components/*"],
-      "@features/*": ["features/*"]
+      "@features/*": ["features/*"],
+      "@groups/*": ["groups/*"]
     },
     "target": "es5",
     "lib": [

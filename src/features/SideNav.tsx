@@ -1,3 +1,4 @@
+import Home from "@groups/Home"
 import { Route, Routes } from "react-router"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
@@ -5,7 +6,6 @@ import styled from "styled-components"
 const Nav = styled.nav`
 display: flex;
 flex-direction: column;
-max-width: 60px;
 height: 100%;
 gap: 2rem;
 align-items: center;
@@ -20,12 +20,16 @@ a:hover, a:focus {
     color: pink;
 }
 `
-
+interface LinkProps {
+    to: string;
+    element: JSX.Element;
+    children: React.ReactNode;
+}
 const SideNav = () => {
     return(
         <>
         <Nav>
-            <Link to='/'>Home</Link>
+            <Link to='/' element={<Home/>}>Home</Link>
             <Link to='/recipes'>Recipes</Link>
         </Nav>
         <Routes>
