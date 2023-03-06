@@ -4,8 +4,10 @@ import styled from "styled-components"
 
 const Nav = styled.nav`
 display: flex;
+flex-direction: column;
+max-width: 60px;
+height: 100%;
 gap: 2rem;
-justify-content: center;
 align-items: center;
 padding: 0.5rem 1rem;
 background-color: black;
@@ -19,7 +21,7 @@ a:hover, a:focus {
 }
 `
 
-const TopNav = () => {
+const SideNav = () => {
     return(
         <>
         <Nav>
@@ -34,4 +36,4 @@ const TopNav = () => {
     )
 }
 
-export default TopNav
+export default SideNav

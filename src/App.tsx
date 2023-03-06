@@ -1,13 +1,9 @@
-// import { TopNav } from "./features/TopNav";
-
-import { TopNav } from "features/TopNav";
+import MainLayout from './components/layouts/MainLayout';
 
 const App = () => {
   return (
-    <>
-      <TopNav/>
-    </>
+    <MainLayout/>
   );
 }
 
-export default App
+export default App;

@@ -1,6 +1,0 @@
-
-const MainLayout = () => {
-    return(
-        <>Test</>
-    )
-}
