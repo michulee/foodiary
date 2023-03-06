@@ -1,5 +1,7 @@
 import styled from "styled-components"
-import SideNav from "../../features/SideNav"
+// import SideNav from "../../features/SideNav"
+// import SideNav from "features/SideNav"
+// import SideNav from "@features/SideNav"
 
 const Wrapper = styled.div`
 height: 100vh;
@@ -8,7 +10,8 @@ height: 100vh;
 const MainLayout = () => {
     return(
         <Wrapper>
-            <SideNav/>
+            Test
+            {/* <SideNav/> */}
         </Wrapper>
     )
 }
