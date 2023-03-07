@@ -1,7 +1,8 @@
-import Home from "@groups/Home"
-import { Route, Routes } from "react-router"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+
+import Button from '@components/elements/Button'
+import { useState } from "react"
 
 const Nav = styled.nav`
 display: flex;
@@ -20,22 +21,21 @@ a:hover, a:focus {
     color: pink;
 }
 `
-interface LinkProps {
-    to: string;
-    element: JSX.Element;
-    children: React.ReactNode;
-}
-const SideNav = () => {
+
+const SideNav = ({}) => {
+    const [toggle, setToggle] = useState(false)
+
+    const handleCreateGroup = () => {
+        setToggle(!toggle)
+    }
+
     return(
         <>
-        <Nav>
-            <Link to='/' element={<Home/>}>Home</Link>
-            <Link to='/recipes'>Recipes</Link>
-        </Nav>
-        <Routes>
-            <Route path='/'/>
-            <Route path='/recipes'/>
-        </Routes>
+            <Nav>
+                <Button value={'+'}/>
+                <Link to='/math'>Math</Link>
+                <Link to='/recipes'>Science</Link>
+            </Nav>
         </>
     )
 }
