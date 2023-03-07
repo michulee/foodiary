@@ -1,13 +1,12 @@
-import MainLayout from '@components/layouts/MainLayout';
 import Group from '@features/Group';
 import Group2 from '@features/Group2';
+import Home from '@pages/Home';
 import { Route, Routes } from 'react-router';
 
 const App = () => {
   return (
-    <>
-      <MainLayout />
-
+    <>  
+      <Home/>
       <Routes>
         <Route path='/math' element={<Group />} />
         <Route path='/recipes' element={<Group2 />} />
