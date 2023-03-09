@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.10711c93.css",
-    "main.js": "/static/js/main.2124906c.js",
-    "static/js/787.7b86e11b.chunk.js": "/static/js/787.7b86e11b.chunk.js",
-    "index.html": "/index.html",
-    "main.10711c93.css.map": "/static/css/main.10711c93.css.map",
-    "main.2124906c.js.map": "/static/js/main.2124906c.js.map",
-    "787.7b86e11b.chunk.js.map": "/static/js/787.7b86e11b.chunk.js.map"
+    "main.css": "/foodiary/static/css/main.10711c93.css",
+    "main.js": "/foodiary/static/js/main.c1279d02.js",
+    "static/js/787.7b86e11b.chunk.js": "/foodiary/static/js/787.7b86e11b.chunk.js",
+    "index.html": "/foodiary/index.html",
+    "main.10711c93.css.map": "/foodiary/static/css/main.10711c93.css.map",
+    "main.c1279d02.js.map": "/foodiary/static/js/main.c1279d02.js.map",
+    "787.7b86e11b.chunk.js.map": "/foodiary/static/js/787.7b86e11b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10711c93.css",
-    "static/js/main.2124906c.js"
+    "static/js/main.c1279d02.js"
   ]
 }
