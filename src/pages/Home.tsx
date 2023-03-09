@@ -90,55 +90,62 @@ const Home = () => {
   const HomeWrapper = styled.div`
     margin: 1rem;
     height: 100%;
+    max-width: 1200px;
+    margin: 0 auto 5rem auto;
   `;
+
+  const ContentWrapper = styled.div`
+  padding: 0 1rem;
+  `
 
   return (
     <HomeWrapper>
       <Slider />
 
-      <Header2 value={"Featured"} />
-      {/* TODO replace explicit components to be dynamic */}
-      <Grid1x2
-        left={
-          <Card
-            type={"New Article"}
-            author={"by Emily Sepulveda"}
-            title={
-              "The Sweet and Juicy Truth About Watermelon: Health Benefits and Fun Facts"
-            }
-            image={
-              "https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            }
-            body={'Watermelon is a refreshing summer fruit that not only quenches your thirst but also has a number of health benefits. Here are some sweet and juicy facts about watermelon that you might not know.'}
-          />
-        }
-        topRight={
-          <Card
-            type={"New Recipe"}
-            author={"by Aiden Giovanni"}
-            title={"Japanese milk bread"}
-            image={
-              "https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            }
-          />
-        }
-        bottomRight={
-          <Card
-            type={"New Article"}
-            author={"by Jen Tino"}
-            title={
-              "From Farm to Table: The Best Stores for Affordable and Fresh Vegetables"
-            }
-            image={
-              "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-            }
-          />
-        }
-      />
-
-      <Header2 value={"Hot Recipes"} />
-      {/* <Grid column={3} element={<Card/>}/> */}
-      <Grid column={3} list={<CardList />} />
+      <ContentWrapper>
+        <Header2 value={"Featured"} />
+        {/* TODO replace explicit components to be dynamic */}
+        <Grid1x2
+          left={
+            <Card
+              type={"New Article"}
+              author={"by Emily Sepulveda"}
+              title={
+                "The Sweet and Juicy Truth About Watermelon: Health Benefits and Fun Facts"
+              }
+              image={
+                "https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              }
+              body={'Watermelon is a refreshing summer fruit that not only quenches your thirst but also has a number of health benefits. Here are some sweet and juicy facts about watermelon that you might not know.'}
+            />
+          }
+          topRight={
+            <Card
+              type={"New Recipe"}
+              author={"by Aiden Giovanni"}
+              title={"Japanese milk bread"}
+              image={
+                "https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              }
+            />
+          }
+          bottomRight={
+            <Card
+              type={"New Article"}
+              author={"by Jen Tino"}
+              title={
+                "From Farm to Table: The Best Stores for Affordable and Fresh Vegetables"
+              }
+              image={
+                "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+              }
+            />
+          }
+        />
+        <Header2 value={"Hot Recipes"} />
+        {/* <Grid column={3} element={<Card/>}/> */}
+        <Grid column={3} list={<CardList />} />
+      </ContentWrapper>
     </HomeWrapper>
   );
 };

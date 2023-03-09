@@ -20,15 +20,26 @@ a:hover, a:focus {
 `
 
 const TopNav = () => {
+    const Logo = styled.img`
+    `
+    const Wrapper = styled.div`
+    displa
+    `
+
+    // TODO possible to swap out components at different media queries?
+
     return(
         <>
-        <Nav>
-            <Link to='/'>Home</Link>
-            <Link to='/recipes'>Recipes</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/blog'>Blog</Link>
-            <Link to='/contact'>Contact Us</Link>
-        </Nav>
+        <Wrapper>
+            {/* <Logo src={''}/> */}
+            <Nav>
+                <Link to='/'>Home</Link>
+                <Link to='/recipes'>Recipes</Link>
+                <Link to='/about'>About</Link>
+                <Link to='/blog'>Blog</Link>
+                <Link to='/contact'>Contact</Link>
+            </Nav>
+        </Wrapper>
         <Routes>
             <Route path='/'/>
             <Route path='/recipes'/>

@@ -60,7 +60,7 @@ const Footer = () => {
                     <Link to='/dinner'>Dinner</Link>
                 </NavSection>
             </Nav>
-            <Copyright>2022 Copyright. All rights reserved.</Copyright>
+            <Copyright>&#169; {new Date().getFullYear()} Copyright. All rights reserved.</Copyright>
         </FooterWrapper>
 
         <Routes>
