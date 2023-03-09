@@ -4,13 +4,13 @@ import Group2 from '@features/Group2';
 import TopNav from '@features/TopNav';
 import Home from '@pages/Home';
 import { Route, Routes } from 'react-router';
-import styled from 'styled-components';
+import styled from "styled-components/macro"
 
 const App = () => {
   const AppWrapper = styled.div`
   // display: flex;
   // flex-direction: column;
-  height: 100vh;
+  // height: 100vh;
 
   > :last-child {
     justify-content: end;

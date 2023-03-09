@@ -1,5 +1,5 @@
 import { ReactElement } from "react"
-import styled from "styled-components"
+import styled from "styled-components/macro"
 
 type GridProps = {
     column?: number,

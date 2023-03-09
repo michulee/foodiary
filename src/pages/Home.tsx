@@ -2,12 +2,14 @@ import Card from "@components/elements/Card";
 import Header2 from "@components/elements/Header2";
 import Grid from "@components/layouts/Grid";
 import Grid1x2 from "@components/layouts/Grid1x2";
+import Slider from "@features/Slider";
 import React, { ReactElement, useEffect, useState } from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
   const [state, setState] = useState([]);
+  const [photos, setPhotos] = useState([]);
   const [featured, setFeatured] = useState([]);
 
   useEffect(() => {
@@ -17,6 +19,20 @@ const Home = () => {
         const response = await fetch(process.env.REACT_APP_GET_RECIPES!);
         const data = await response.json();
         setState(data);
+
+        const url =
+          "https://api.unsplash.com/collections/93027296/photos/" +
+          "?client_id=" +
+          process.env.REACT_APP_UNSPLASH_ACCESS;
+
+        // const url =
+        // 'https://api.unsplash.com/collections/93027296/photos/' +
+        // '?client_id=' +
+        // process.env.REACT_APP_UNSPLASH_ACCESS;
+        const unsplashResponse = await fetch(url);
+        const unsplashData = await unsplashResponse.json();
+        setPhotos(unsplashData);
+        console.log(photos);
       };
       getData();
     } catch (error) {
@@ -33,9 +49,9 @@ const Home = () => {
           return (
             <Card
               key={uuidv4()}
-              image={""}
+              image={recipe["image"]}
               title={recipe["title"]}
-              caption={recipe["_id"]}
+              caption={recipe["caption"]}
             />
           );
         })}
@@ -78,12 +94,46 @@ const Home = () => {
 
   return (
     <HomeWrapper>
+      <Slider />
+
       <Header2 value={"Featured"} />
       {/* TODO replace explicit components to be dynamic */}
       <Grid1x2
-        left={<Card title={"Left card"} />}
-        topRight={<Card title={"Top right card"} />}
-        bottomRight={<Card title={"Bottom right card"} />}
+        left={
+          <Card
+            type={"New Article"}
+            author={"by Emily Sepulveda"}
+            title={
+              "The Sweet and Juicy Truth About Watermelon: Health Benefits and Fun Facts"
+            }
+            image={
+              "https://images.unsplash.com/photo-1589984662646-e7b2e4962f18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            }
+            body={'Watermelon is a refreshing summer fruit that not only quenches your thirst but also has a number of health benefits. Here are some sweet and juicy facts about watermelon that you might not know.'}
+          />
+        }
+        topRight={
+          <Card
+            type={"New Recipe"}
+            author={"by Aiden Giovanni"}
+            title={"Japanese milk bread"}
+            image={
+              "https://images.unsplash.com/photo-1598373182133-52452f7691ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            }
+          />
+        }
+        bottomRight={
+          <Card
+            type={"New Article"}
+            author={"by Jen Tino"}
+            title={
+              "From Farm to Table: The Best Stores for Affordable and Fresh Vegetables"
+            }
+            image={
+              "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+            }
+          />
+        }
       />
 
       <Header2 value={"Hot Recipes"} />

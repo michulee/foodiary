@@ -1,14 +1,15 @@
-import { ReactElement } from "react"
-import styled from "styled-components"
+import { ReactElement, useEffect } from "react"
+import styled from "styled-components/macro"
 
 type GridProps = {
     left: ReactElement,
     topRight: ReactElement,
-    bottomRight: ReactElement
+    bottomRight: ReactElement,
 }
 const Grid1x2 = ({left, topRight, bottomRight} : GridProps) => {
     const LeftGridItem = styled.div`
     grid-area: grid_left;
+    max-height: 500px;
     `
     const TopRightGridItem = styled.div`
     grid-area: grid_top_right;
@@ -31,7 +32,6 @@ const Grid1x2 = ({left, topRight, bottomRight} : GridProps) => {
             "grid_left grid_bottom_right";
     }
     `
-
 
     return(
         <GridWrapper>
