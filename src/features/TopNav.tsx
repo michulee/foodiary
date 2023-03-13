@@ -1,6 +1,10 @@
 import { Route, Routes } from "react-router"
 import { Link } from "react-router-dom"
 import styled from "styled-components/macro"
+import logo from 'logo.svg'
+import Login from "@pages/Login"
+import Home from "@pages/Home"
+import Register from "@pages/Register"
 
 const Nav = styled.nav`
 display: flex;
@@ -8,7 +12,24 @@ gap: 2rem;
 justify-content: center;
 align-items: center;
 padding: 0.5rem 1rem;
-background-color: black;
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover, a:focus {
+    color: pink;
+}
+`
+
+const Nav2 = styled.nav`
+display: flex;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+padding: 0.5rem 1rem;
+
+margin-left: auto;
 
 a {
     text-decoration: none;
@@ -21,9 +42,14 @@ a:hover, a:focus {
 
 const TopNav = () => {
     const Logo = styled.img`
+    display: block;
+    width: 25px;
+    margin: 5px;
     `
     const Wrapper = styled.div`
-    displa
+    display: flex;
+    background-color: black;
+    padding: 0 1rem;
     `
 
     // TODO possible to swap out components at different media queries?
@@ -31,21 +57,25 @@ const TopNav = () => {
     return(
         <>
         <Wrapper>
-            {/* <Logo src={''}/> */}
             <Nav>
-                <Link to='/'>Home</Link>
+                <Link to='/'><Logo src={logo}/></Link>
                 <Link to='/recipes'>Recipes</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/blog'>Blog</Link>
                 <Link to='/contact'>Contact</Link>
             </Nav>
+            <Nav2>
+                <Link to='/login'>Login</Link>
+            </Nav2>
         </Wrapper>
         <Routes>
-            <Route path='/'/>
+            <Route path='/' element={<Home/>}/>
             <Route path='/recipes'/>
             <Route path='/about'/>
             <Route path='/blog'/>
             <Route path='/contact'/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/register' element={<Register/>}/>
         </Routes>
         </>
     )
