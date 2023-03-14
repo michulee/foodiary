@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/foodiary/static/css/main.10711c93.css",
-    "main.js": "/foodiary/static/js/main.599807ad.js",
+    "main.js": "/foodiary/static/js/main.6ef0b857.js",
     "static/js/787.7b86e11b.chunk.js": "/foodiary/static/js/787.7b86e11b.chunk.js",
+    "static/media/logo.svg": "/foodiary/static/media/logo.fded2dc02ecaf4214013f45d761d5aae.svg",
     "index.html": "/foodiary/index.html",
     "main.10711c93.css.map": "/foodiary/static/css/main.10711c93.css.map",
-    "main.599807ad.js.map": "/foodiary/static/js/main.599807ad.js.map",
+    "main.6ef0b857.js.map": "/foodiary/static/js/main.6ef0b857.js.map",
     "787.7b86e11b.chunk.js.map": "/foodiary/static/js/787.7b86e11b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10711c93.css",
-    "static/js/main.599807ad.js"
+    "static/js/main.6ef0b857.js"
   ]
 }
