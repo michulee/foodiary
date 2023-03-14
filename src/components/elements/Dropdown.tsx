@@ -1,16 +1,30 @@
 import { ReactElement } from "react"
+import { Link } from "react-router-dom"
 import styled from "styled-components/macro"
+
+const Wrapper = styled.div`
+`
+
+const Button = styled.button`
+`
+
+const Menu = styled.ul`
+`
+
 type Props = {
-    label?: string,
-    list: ReactElement,
+    buttonName?: string,
+    linkPath?: string,
+    linkName?: string
 }
-const Dropdown = ({label, list} : Props) => {
-    const Wrapper = styled.div`
-    `
+const Dropdown = ({buttonName, linkPath, linkName} : Props) => {
+
+
     return(
         <Wrapper>
-            <button>{label}</button>
-            <ul></ul>
+            <Button>{buttonName}</Button>
+            <Menu>
+                <Link to={linkPath}>{linkName}</Link>
+            </Menu>
         </Wrapper>
     )
 }

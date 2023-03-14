@@ -6,6 +6,7 @@ import Login from "@pages/Login"
 import Home from "@pages/Home"
 import Register from "@pages/Register"
 import Contact from "@pages/Contact"
+import Recipes from "@pages/Recipes"
 
 const Nav = styled.nav`
 display: flex;
@@ -41,26 +42,24 @@ a:hover, a:focus {
 }
 `
 
+const Logo = styled.img`
+display: block;
+width: 25px;
+margin: 5px;
+`
+const Wrapper = styled.div`
+display: flex;
+background-color: black;
+padding: 0 1rem;
+`
+
 const TopNav = () => {
-    const Logo = styled.img`
-    display: block;
-    width: 25px;
-    margin: 5px;
-    `
-    const Wrapper = styled.div`
-    display: flex;
-    background-color: black;
-    padding: 0 1rem;
-    `
-
-    // TODO possible to swap out components at different media queries?
-
     return(
         <>
         <Wrapper>
             <Nav>
                 <Link to='/'><Logo src={logo}/></Link>
-                <Link to='/recipes'>Recipes</Link>
+                <Link to='/recipe'>Recipes</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/blog'>Blog</Link>
                 <Link to='/contact'>Contact</Link>
@@ -73,12 +72,12 @@ const TopNav = () => {
         {/* FIXME try to make content between nav and footer, but have routes at top at App.tsx  */}
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/recipes'/>
-            <Route path='/about'/>
-            <Route path='/blog'/>
-            <Route path='/contact' element={<Contact/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/register' element={<Register/>}/>
+            <Route path='recipe' element={<Recipes/>}/>
+            <Route path='about'/>
+            <Route path='blog'/>
+            <Route path='contact' element={<Contact/>}/>
+            <Route path='login' element={<Login/>}/>
+            <Route path='register' element={<Register/>}/>
         </Routes>
         </>
     )

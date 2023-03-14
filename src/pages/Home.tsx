@@ -19,20 +19,6 @@ const Home = () => {
         const response = await fetch(process.env.REACT_APP_GET_RECIPES!);
         const data = await response.json();
         setState(data);
-
-        const url =
-          "https://api.unsplash.com/collections/93027296/photos/" +
-          "?client_id=" +
-          process.env.REACT_APP_UNSPLASH_ACCESS;
-
-        // const url =
-        // 'https://api.unsplash.com/collections/93027296/photos/' +
-        // '?client_id=' +
-        // process.env.REACT_APP_UNSPLASH_ACCESS;
-        const unsplashResponse = await fetch(url);
-        const unsplashData = await unsplashResponse.json();
-        setPhotos(unsplashData);
-        console.log(photos);
       };
       getData();
     } catch (error) {

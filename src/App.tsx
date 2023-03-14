@@ -8,17 +8,17 @@ import Register from '@pages/Register';
 import { Route, Routes } from 'react-router';
 import styled, { createGlobalStyle } from "styled-components/macro"
 
-const App = () => {
-  const AppWrapper = styled.div`
-  // display: flex;
-  // flex-direction: column;
-  // height: 100vh;
+const AppWrapper = styled.div`
+// display: flex;
+// flex-direction: column;
+// height: 100vh;
 
-  > :last-child {
-    justify-content: end;
-    align-items: end;
-  }
-  `
+> :last-child {
+  justify-content: end;
+  align-items: end;
+}
+`
+const App = () => {
 
   return (
     <>  
@@ -31,12 +31,12 @@ const App = () => {
         <Footer/>
       </AppWrapper>
 
-      <Routes>
+      {/* <Routes>
         <Route path='/math' element={<Group />} />
         <Route path='/recipes' element={<Group2 />} />
         <Route path='/recipes/week1' element={<Group />} />
         <Route path='/recipes/week2' element={<Group2 />} />
-      </Routes>
+      </Routes> */}
 
       {/* FIXME placing Routes here will make content below footer */}
       {/* <Routes>
