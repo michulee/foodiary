@@ -6,7 +6,7 @@ type InputProps = {
     type?: string,
     value?: string
 }
-const TextInput = ({labelName, name, type, value} : InputProps) => {
+const Input = ({labelName, name, type, value} : InputProps) => {
     const InputWrapper = styled.div`
     display: flex;
     max-width: 300px;
@@ -25,4 +25,4 @@ const TextInput = ({labelName, name, type, value} : InputProps) => {
     )
 }
 
-export default TextInput
+export default Input

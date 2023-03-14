@@ -5,6 +5,7 @@ import logo from 'logo.svg'
 import Login from "@pages/Login"
 import Home from "@pages/Home"
 import Register from "@pages/Register"
+import Contact from "@pages/Contact"
 
 const Nav = styled.nav`
 display: flex;
@@ -68,12 +69,14 @@ const TopNav = () => {
                 <Link to='/login'>Login</Link>
             </Nav2>
         </Wrapper>
+
+        {/* FIXME try to make content between nav and footer, but have routes at top at App.tsx  */}
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/recipes'/>
             <Route path='/about'/>
             <Route path='/blog'/>
-            <Route path='/contact'/>
+            <Route path='/contact' element={<Contact/>}/>
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
         </Routes>
