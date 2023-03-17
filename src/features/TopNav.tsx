@@ -10,7 +10,12 @@ import Recipes from "@pages/Recipes"
 import AdminDashboard from "@pages/AdminDashboard.tsx"
 import About from "@pages/About"
 import Page404 from "@pages/Page404"
+import { useState } from "react"
 
+
+const MobileNav = styled.nav`
+// display: flex;
+`
 const Nav = styled.nav`
 display: flex;
 gap: 2rem;
@@ -54,22 +59,47 @@ const Wrapper = styled.div`
 display: flex;
 background-color: black;
 padding: 0 1rem;
+
+@media screen and (min-width: 800px) {
+
+}
 `
 
+const MenuIcon = styled.span`
+color: #FFFFFF;
+@media screen and (min-width: 1200px) {
+    // display: none;
+}
+`
+
+
+
 const TopNav = () => {
+    const [menu, toggleMenu] = useState(false)
+
+    const Dropdown = styled.div`
+    display: flex;
+    cursor: pointer;
+    // display: ${menu ? 'block' : 'none'}
+    `
     return(
         <>
         <Wrapper>
-            <Nav>
-                <Link to='/'><Logo src={logo}/></Link>
-                <Link to='/recipe'>Recipes</Link>
-                <Link to='/about'>About</Link>
-                <Link to='/blog'>Blog</Link>
-                <Link to='/contact'>Contact</Link>
-            </Nav>
-            <Nav2>
-                <Link to='/login'>Login</Link>
-            </Nav2>
+            <Link to='/'><Logo src={logo}/></Link>
+            <MobileNav>
+                {/* <MenuIcon onClick={() => toggleMenu(!menu)} className="material-symbols-outlined">menu</MenuIcon> */}
+                <Dropdown>
+                    <Nav>
+                        <Link to='/recipe'>Recipes</Link>
+                        <Link to='/about'>About</Link>
+                        <Link to='/blog'>Blog</Link>
+                        <Link to='/contact'>Contact</Link>
+                    </Nav>
+                    <Nav2>
+                        {/* <Link to='/login'>Login</Link> */}
+                    </Nav2>
+                </Dropdown>
+            </MobileNav>
         </Wrapper>
 
         {/* FIXME try to make content between nav and footer, but have routes at top at App.tsx  */}

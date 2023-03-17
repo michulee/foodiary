@@ -4,6 +4,8 @@ import styled from "styled-components/macro"
 const Image = styled.img`
 max-width: 600px;
 max-height: 600px;
+margin: 0 auto;
+display: block;
 `
 const Page404 = () => {
     return(

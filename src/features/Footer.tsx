@@ -1,3 +1,4 @@
+import Page404 from "@pages/Page404"
 import { Link } from "react-router-dom"
 import { Route, Routes } from "react-router-dom"
 import styled from "styled-components/macro"
@@ -7,6 +8,7 @@ background-color: black;
 color: white;
 text-align: center;
 padding: 0.5rem;
+margin-top: auto;
 `
 const Nav = styled.nav`
 display: grid;

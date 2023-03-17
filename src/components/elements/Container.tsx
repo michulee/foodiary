@@ -3,6 +3,7 @@ import styled from "styled-components/macro"
 const ContainerElement = styled.div`
 max-width: 1200px;
 margin: 0 auto;
+width: 100%;
 `
 
 // ! difference between React.ReactNode and Grid's ReactElement?

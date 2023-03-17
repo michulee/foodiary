@@ -13,7 +13,7 @@ display: flex;
 flex-direction: column;
 min-height: 100vh;
 // min-height: 80vh;
-justify-content: space-between;
+// justify-content: space-between;
 
 
 > :last-child {
