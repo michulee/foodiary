@@ -8,8 +8,8 @@ const Register = () => {
     return(
         <Container>
             <Form>
-                <Input labelName="Username" type="text"/>
-                <Input labelName="Password" type="password"/>
+                <Input label="Username" type="text"/>
+                <Input label="Password" type="password"/>
             </Form>
         </Container>
     )

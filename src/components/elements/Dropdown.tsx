@@ -23,7 +23,7 @@ const Dropdown = ({buttonName, linkPath, linkName} : Props) => {
         <Wrapper>
             <Button>{buttonName}</Button>
             <Menu>
-                <Link to={linkPath}>{linkName}</Link>
+                {/* <Link to={linkPath}>{linkName}</Link> */}
             </Menu>
         </Wrapper>
     )

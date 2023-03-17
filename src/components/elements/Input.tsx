@@ -1,26 +1,32 @@
+import { ChangeEvent } from "react"
 import styled from "styled-components/macro"
 
 type InputProps = {
-    labelName?: string,
+    label?: string,
+    htmlFor?: string,
     name?: string,
     type?: string,
-    value?: string
+    value?: string,
+    onChange?: React.ChangeEvent<HTMLInputElement>
 }
-const Input = ({labelName, name, type, value} : InputProps) => {
-    const InputWrapper = styled.div`
-    display: flex;
-    max-width: 300px;
-    flex-wrap: wrap;
-    `
-    const Label = styled.label`
-    `
-    const Input = styled.input`
 
-    `
+const InputWrapper = styled.div`
+display: flex;
+max-width: 300px;
+flex-wrap: wrap;
+`
+const Label = styled.label`
+`
+const NewInput = styled.input`
+`
+const Input = ({label, htmlFor, name, type, value, onChange} : InputProps) => {
+    // const changeHandler = !onChange ? undefined : (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     onChange(event.target.value);
+    // };
     return(
         <InputWrapper>
-            <Label>{labelName}</Label>
-            <Input name={name} type={type} value={value}/>
+            <Label htmlFor={htmlFor}>{label}</Label>
+            <NewInput name={name} type={type} value={value}/>
         </InputWrapper>
     )
 }

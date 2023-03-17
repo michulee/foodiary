@@ -8,8 +8,8 @@ const Login = () => {
     return(
         <Container>
             <Link to={'/register'}>Register</Link>
-            <Input labelName="Username" type="text"/>
-            <Input labelName="Password" type="password"/>
+            <Input label="Username" type="text"/>
+            <Input label="Password" type="password"/>
         </Container>
     )
 }

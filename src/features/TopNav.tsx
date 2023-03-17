@@ -7,6 +7,9 @@ import Home from "@pages/Home"
 import Register from "@pages/Register"
 import Contact from "@pages/Contact"
 import Recipes from "@pages/Recipes"
+import AdminDashboard from "@pages/AdminDashboard.tsx"
+import About from "@pages/About"
+import Page404 from "@pages/Page404"
 
 const Nav = styled.nav`
 display: flex;
@@ -73,11 +76,12 @@ const TopNav = () => {
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='recipe' element={<Recipes/>}/>
-            <Route path='about'/>
-            <Route path='blog'/>
-            <Route path='contact' element={<Contact/>}/>
+            <Route path='about' element={<About/>}/>
+            <Route path='blog' element={<Page404/>}/>
+            <Route path='contact' element={<Page404/>}/>
             <Route path='login' element={<Login/>}/>
             <Route path='register' element={<Register/>}/>
+            <Route path='admin' element={<AdminDashboard/>}/>
         </Routes>
         </>
     )

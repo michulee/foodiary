@@ -9,13 +9,17 @@ import { Route, Routes } from 'react-router';
 import styled, { createGlobalStyle } from "styled-components/macro"
 
 const AppWrapper = styled.div`
-// display: flex;
-// flex-direction: column;
-// height: 100vh;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+// min-height: 80vh;
+justify-content: space-between;
+
 
 > :last-child {
-  justify-content: end;
-  align-items: end;
+  // display: flex;
+  // justify-content: end;
+  // align-items: end;
 }
 `
 const App = () => {
