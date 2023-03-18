@@ -11,6 +11,7 @@ import AdminDashboard from "@pages/AdminDashboard.tsx"
 import About from "@pages/About"
 import Page404 from "@pages/Page404"
 import { useState } from "react"
+import FilterView from "./FilterView"
 
 
 const MobileNav = styled.nav`
@@ -59,6 +60,12 @@ const Wrapper = styled.div`
 display: flex;
 background-color: black;
 padding: 0 1rem;
+
+position: fixed;
+width: 100%;
+z-index: 1;
+top: 0;
+left: 0;
 
 @media screen and (min-width: 800px) {
 
@@ -112,6 +119,7 @@ const TopNav = () => {
             <Route path='login' element={<Login/>}/>
             <Route path='register' element={<Register/>}/>
             <Route path='admin' element={<AdminDashboard/>}/>
+            <Route path='pages/:pageID' element={<Recipes/>}/>
         </Routes>
         </>
     )

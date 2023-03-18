@@ -7,7 +7,7 @@ gap: 1rem;
 grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 
 @media screen and (min-width: 600px) {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 `
 

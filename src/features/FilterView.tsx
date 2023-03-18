@@ -1,8 +1,11 @@
 import Card from "@components/elements/Card";
 import Grid from "@components/layouts/Grid";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
+// ** FilterView reads the parameter, and based on what page it is, it displays the items
+// ** /recipe or /recipe/page/1 shows 3
 const FilterView = () => {
     const [state, setState] = useState([]);
 
@@ -22,6 +25,12 @@ const FilterView = () => {
 
     // OPTION 1: using fat arrow notation
     const CardList = (): JSX.Element => {
+        // ! needs to use loader to query data from db
+        // ! needs to use actions to call X data on each page
+        let { pageID } = useParams();
+        console.log(pageID)
+
+        const filtered = 0;
         return (
         <>
             {state.map((recipe) => {
