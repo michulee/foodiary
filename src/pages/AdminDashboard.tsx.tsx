@@ -38,18 +38,14 @@ const AdminDashboard = () => {
         console.log("COLLECTION: ", collection)
         console.log('REQUEST: ', request)
         try {
-            // const options = {
-            //     method: request,
-            //     headers: { 'Content-Type': 'application/json' }
-            //     // body: JSON.stringify(body)
-            // }
-            // const response = await fetch(process.env.REACT_APP_GET_RECIPES!, options)
-            //     .then((response) => setData(response.json()));
-
-            const response = await fetch(process.env.REACT_APP_GET_RECIPES!)
+            const options = {
+                method: request,
+                headers: { 'Content-Type': 'application/json' }
+                // body: JSON.stringify(body)
+            }
+        const response = await fetch(process.env.REACT_APP_GET_RECIPES!, options)
                 .then((response) => setData(response.json()));
-
-            // console.log(data)
+        console.log(response)
         } catch (error) {
             console.error(error)
         }
@@ -62,9 +58,10 @@ const AdminDashboard = () => {
         )
     }
     const TableBody = () => {
+
         return (
             <>
-                {data && console.log(data)}
+                {/* {data.length!==0 && JSON.stringify(data)} */}
             </>
         )
     }

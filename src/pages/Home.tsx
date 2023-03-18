@@ -28,9 +28,10 @@ const Home = () => {
 
   // OPTION 1: using fat arrow notation
   const CardList = (): JSX.Element => {
+    const filtered = state.slice(0,3); //take the first 3 items
     return (
       <>
-        {state.map((recipe) => {
+        {filtered.map((recipe) => {
           // ??? recipe.title doesn't work but recipe['title'] does
           return (
             <Card
