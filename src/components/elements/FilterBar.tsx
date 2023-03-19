@@ -33,13 +33,21 @@ cursor: pointer;
 }
 `
 
+const Fieldset = styled.fieldset`
+border: none;
+display: flex;
+gap: 0.5rem;
+align-items: center;
+`
+
 type Props = {
 
 }
 const FilterBar = () => {
     const [state, setState] = useState('default')
 
-    const [sort, setSort] = useState('')
+    const [sort, setSort] = useState('default')
+    // TODO send the sort value as a parameter
 
     const handleSort = (event: any) => {
         setSort(event.target.value)
@@ -47,17 +55,17 @@ const FilterBar = () => {
 
     return(
         <Wrapper>
-            <Icon className="material-symbols-outlined">view_comfy</Icon>
-            <Dropdown/>
-            <fieldset>
-                <label htmlFor="sort">Sort</label>
-                <select name="sort" id="sort" onChange={handleSort}>
+            {/* <Icon className="material-symbols-outlined">view_comfy</Icon> */}
+            {/* <Dropdown/> */}
+            <Fieldset>
+                {/* <label htmlFor="sort">Sort</label> */}
+                <select name="sort" title="Sort" id="sort" onChange={handleSort}>
                     {/* <option value="" selected disabled>Please choose a HTTP request</option> */}
-                    <option value="Featured">Featured</option>
-                    <option value="A to Z">A to Z</option>
-                    <option value="Z to A">Z to A</option>
+                    <option value="default">Featured</option>
+                    <option value="sort">A to Z</option>
+                    <option value="reverseSort">Z to A</option>
                 </select>
-            </fieldset>
+            </Fieldset>
         </Wrapper>
     )
 }
