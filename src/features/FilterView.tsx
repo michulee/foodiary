@@ -31,7 +31,7 @@ const FilterView = () => {
         } catch (error) {
           console.error(error);
         }
-      }, [location]);
+      }, []);
 
     // OPTION 1: using fat arrow notation
     const CardList = (): JSX.Element => {
