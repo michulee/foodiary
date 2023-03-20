@@ -129,8 +129,8 @@ const TopNav = () => {
             path="recipe/pages/:pageID" 
             element={<Recipes />} 
         /> */}
-        <Route path="about" element={<About />} />
-        <Route path="blog" element={<Page404 />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Page404 />} />
         <Route path="contact" element={<Page404 />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
