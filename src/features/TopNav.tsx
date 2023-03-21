@@ -109,7 +109,7 @@ const TopNav = () => {
 
       {/* FIXME try to make content between nav and footer, but have routes at top at App.tsx  */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />}/>
         <Route path="recipe" element={<Recipes />}>
           <Route 
               path="pages/:pageID" 
@@ -129,8 +129,8 @@ const TopNav = () => {
             path="recipe/pages/:pageID" 
             element={<Recipes />} 
         /> */}
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Page404 />} />
+        <Route path="about" element={<About />} />
+        <Route path="blog" element={<Page404 />} />
         <Route path="contact" element={<Page404 />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />

@@ -1,6 +1,5 @@
 {
   "name": "foodiary",
-  "homepage": "https://michulee.com/foodiary/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
