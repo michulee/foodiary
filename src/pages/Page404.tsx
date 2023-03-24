@@ -2,10 +2,18 @@ import Container from "@components/elements/Container"
 import styled from "styled-components/macro"
 
 const Image = styled.img`
-max-width: 600px;
-max-height: 600px;
+max-width: 400px;
+width: 100%;
+// max-height: 300px;
+// max-width: 100%:
+// padding-top: 1rem;
+object-fit: cover;
 margin: 0 auto;
 display: block;
+
+@media screen and (min-width: 360px) {
+    // max-width: 100%;
+}
 `
 const Page404 = () => {
     return(

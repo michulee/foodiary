@@ -3,7 +3,7 @@ import { ChangeEvent, FormEvent, ReactElement, useEffect, useState } from "react
 
 const AdminDashboard = () => {
     // need to initialize it with {}, so that ...prevState can be read
-    const [data, setData] = useState({})
+    const [data, setData] = useState([{}])
 
     const [title, setTitle] = useState()
     const [image, setImage] = useState()
@@ -43,18 +43,21 @@ const AdminDashboard = () => {
                 headers: { 'Content-Type': 'application/json' }
                 // body: JSON.stringify(body)
             }
-        const response = await fetch(process.env.REACT_APP_GET_RECIPES!, options)
-                .then((response) => setData(response.json()));
-        console.log(response)
+            const response = await fetch(process.env.REACT_APP_GET_RECIPES!, options)
+            setData([response])
+
+        // const response = await fetch(process.env.REACT_APP_GET_RECIPES!, options)
+        //         .then((response) => setData(response.json()));
         } catch (error) {
             console.error(error)
         }
     }
 
     const TableHead = () => {
-
         return (
-            <></>
+            // <></>
+            <>{Object.keys(data).length !== 0 ? console.log('data: ', data) : null}</>
+            // <>{data.length !== 0 ? console.log('data: ', data) : null}</>
         )
     }
     const TableBody = () => {
@@ -71,16 +74,16 @@ const AdminDashboard = () => {
             <form onSubmit={(e) => handleSubmit(e)}>
                 <fieldset>
                     <label htmlFor="collection">Collection</label>
-                    <select name="collection" id="collection" onChange={handleCollectionChange}>
-                        <option value="">Please choose an option</option>
+                    <select defaultValue="Choose a collection" name="collection" id="collection" onChange={handleCollectionChange}>
+                        <option value="Choose a collection" disabled>Choose an option</option>
                         <option value="recipes">recipes</option>
                         <option value="featured">featured</option>
                     </select>
                 </fieldset>
                 <fieldset>
                     <label htmlFor="request">HTTP Request</label>
-                    <select name="request" id="request" onChange={handleRequestChange}>
-                        <option value="" selected disabled>Please choose a HTTP request</option>
+                    <select defaultValue="Choose a HTTP request" name="request" id="request" onChange={handleRequestChange}>
+                        <option value="Choose a HTTP request" disabled>Choose a HTTP request</option>
                         <option value="GET">GET</option>
                         <option value="POST">POST</option>
                         <option value="PUT">PUT</option>

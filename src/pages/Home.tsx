@@ -1,4 +1,5 @@
 import Card from "@components/elements/Card";
+import CardGradient from "@components/elements/CardGradient";
 import Header2 from "@components/elements/Header2";
 import Grid from "@components/layouts/Grid";
 import Grid1x2 from "@components/layouts/Grid1x2";
@@ -77,6 +78,7 @@ const Home = () => {
   const HomeWrapper = styled.div`
     margin: 1rem;
     height: 100%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto 5rem auto;
   `;
@@ -90,11 +92,12 @@ const Home = () => {
       <Slider />
 
       <ContentWrapper>
-        <Header2 value={"Featured"} />
+        {/* <Header2 value={"Featured"} /> */}
         {/* TODO replace explicit components to be dynamic */}
-        <Grid1x2
+
+        {/* <Grid1x2
           left={
-            <Card
+            <CardGradient
               type={"New Article"}
               author={"by Emily Sepulveda"}
               title={
@@ -107,7 +110,7 @@ const Home = () => {
             />
           }
           topRight={
-            <Card
+            <CardGradient
               type={"New Recipe"}
               author={"by Aiden Giovanni"}
               title={"Japanese milk bread"}
@@ -117,7 +120,7 @@ const Home = () => {
             />
           }
           bottomRight={
-            <Card
+            <CardGradient
               type={"New Article"}
               author={"by Jen Tino"}
               title={
@@ -128,7 +131,7 @@ const Home = () => {
               }
             />
           }
-        />
+        /> */}
         <Header2 value={"Hot Recipes"} />
         {/* <Grid column={3} element={<Card/>}/> */}
         <Grid column={3} list={<CardList />} />

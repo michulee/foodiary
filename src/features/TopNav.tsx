@@ -7,7 +7,7 @@ import Home from "@pages/Home";
 import Register from "@pages/Register";
 import Contact from "@pages/Contact";
 import Recipes from "@pages/Recipes";
-import AdminDashboard from "@pages/AdminDashboard.tsx";
+import AdminDashboard from "@pages/AdminDashboard";
 import About from "@pages/About";
 import Page404 from "@pages/Page404";
 import { useState } from "react";

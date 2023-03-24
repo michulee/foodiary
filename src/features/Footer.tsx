@@ -9,6 +9,9 @@ color: white;
 text-align: center;
 padding: 0.5rem;
 margin-top: auto;
+
+@media screen and (min-width: 600px) {
+}
 `
 const Nav = styled.nav`
 display: grid;
